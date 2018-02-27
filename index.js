@@ -51,7 +51,7 @@ module.exports = function(infos, whitelist, callback) {
 
 		mailListener.on("mail", function(mail, seqno, attributes) {
 
-			if (!checkMail(mail.from[0].address))
+			if (!allow(mail.from[0].address))
 				return false;
 
 			callback(mail);
