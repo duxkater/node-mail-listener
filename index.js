@@ -1,6 +1,29 @@
 var MailListener = require("mail-listener2");
 
-module.exports = function(infos, callback) {
+module.exports = function(infos, whitelist, callback) {
+
+	function allow(mail) {
+
+		for (var i in whitelist) {
+
+			let row = whitelist[i];
+
+			if (row.substring(0, 1) === '*') {
+				if (address.split('@')[1] === row.split('@')[1])
+					return true;
+				continue;
+			}
+
+			if (address === row)
+				return true;
+
+			continue;
+
+		}
+
+		return false;
+
+	}
 
 	for (var i in infos) {
 
@@ -27,7 +50,12 @@ module.exports = function(infos, callback) {
 		});
 
 		mailListener.on("mail", function(mail, seqno, attributes) {
-			callback(mail, info.login);
+
+			if (!checkMail(mail.from[0].address))
+				return false;
+
+			callback(mail);
+			
 		});
 
 	}
