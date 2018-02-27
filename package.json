@@ -1,0 +1,57 @@
+{
+  "_from": "node-mail-listener",
+  "_id": "node-mail-listener@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-orExiQOTa9ez0XXM/NNwIXqznnfv/pqnR4pb6SP2e20juoCTNTOGiLyr4/t4v7QAZbsl0ZgC32p8tTEyocVDAw==",
+  "_location": "/node-mail-listener",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "node-mail-listener",
+    "name": "node-mail-listener",
+    "escapedName": "node-mail-listener",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-mail-listener/-/node-mail-listener-1.2.0.tgz",
+  "_shasum": "9459d86c63f9bac0ec9d664d2c1059504f19dd54",
+  "_spec": "node-mail-listener",
+  "_where": "C:\\sftp\\node-mail-listener",
+  "author": {
+    "name": "gautier ROCHAS"
+  },
+  "bugs": {
+    "url": "https://github.com/duxkater/node-mail-listener/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "imap": "^0.8.19",
+    "mail-listener2": "^0.3.1",
+    "mailparser": "^2.2.0"
+  },
+  "deprecated": false,
+  "description": "Listens to mails from defined senders and executes code in a callback",
+  "devDependencies": {},
+  "homepage": "https://github.com/duxkater/node-mail-listener#readme",
+  "keywords": [
+    "mail",
+    "listener"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "node-mail-listener",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duxkater/node-mail-listener.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.4.0"
+}
