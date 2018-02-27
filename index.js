@@ -2,7 +2,7 @@ var MailListener = require("mail-listener2");
 
 module.exports = function(infos, whitelist, callback) {
 
-	function allow(mail) {
+	function allow(address) {
 
 		for (var i in whitelist) {
 
