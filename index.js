@@ -16,10 +16,15 @@ module.exports = function(infos, callback) {
 				rejectUnauthorized: false
 			},
 			markSeen: false,
+			fetchUnreadOnStart: false,
 			mailbox: "INBOX",
 		});
 
 		mailListener.start();
+
+		mailListener.on("error", function(err) {
+			console.log(err);
+		});
 
 		mailListener.on("mail", function(mail, seqno, attributes) {
 			callback(mail, info.login);
