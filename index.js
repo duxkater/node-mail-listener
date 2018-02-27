@@ -4,6 +4,9 @@ module.exports = function(infos, whitelist, callback) {
 
 	function allow(address) {
 
+		if(whitelist.length === 0)
+			return true;
+
 		for (var i in whitelist) {
 
 			let row = whitelist[i];
@@ -39,8 +42,8 @@ module.exports = function(infos, whitelist, callback) {
 				rejectUnauthorized: false
 			},
 			markSeen: false,
-			fetchUnreadOnStart: false,
 			mailbox: "INBOX",
+			searchFilter: ["UNSEEN"],
 		});
 
 		mailListener.start();
@@ -55,7 +58,7 @@ module.exports = function(infos, whitelist, callback) {
 				return false;
 
 			callback(mail);
-			
+
 		});
 
 	}
